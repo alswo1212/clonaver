@@ -1,5 +1,6 @@
 ﻿import { useState } from "react";
 import Img from "@component/common/Img";
+import SearchBox from "../common/SearchBox";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,29 +26,7 @@ const Header = () => {
     <header
       className={`${isVisible ? "header-in" : "header-out"} fixed top-0 left-0 z-50 w-full`}
     >
-      <div className="relative overflow-hidden h-14 pl-14">
-        <a className="absolute top-0 left-0 p-[9px_0_8px_12px]" href="/">
-          <span className="relative block bg-[#03cf5d]">
-            <Img bgx={-270} bgy={-145} />
-          </span>
-        </a>
-        <form className="m-0 p-0">
-          <div className="mr-[15px] pr-18.75">
-            <input
-              className="relative w-full border-0 outline-[transparent] pt-4.5 pb-4 
-              text-[#1e1e23] box-content text-lg font-bold h-5.5 placeholder-gray-400 placeholder:font-medium
-              text-"
-              type="search"
-              placeholder="검색어를 입력해주세요."
-            />
-          </div>
-          <div className="absolute right-2.5 top-0 z-10">
-            <button type="button" className="p-[9px_2px_8px] ">
-              <Img bgx={0} bgy={-145} />
-            </button>
-          </div>
-        </form>
-      </div>
+      <SearchBox></SearchBox>
       <div className="overflow-hidden border-t-[rgba(0,0,0,.05)] border-solid border-t">
         <nav className="relative h-13 bg-[linear-gradient(to_right,#04ce6d,#03cb87)]">
           <div className="relative z-1 whitespace-nowrap overflow-x-auto overflow-hidden">
