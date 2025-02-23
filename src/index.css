@@ -3,3 +3,12 @@
 }
 
 @import "tailwindcss";
+
+@layer components {
+  .main-nav-box {
+    @media (min-height: 720px) {
+      @apply pt-5;
+      @apply pb-9;
+    }
+  }
+}

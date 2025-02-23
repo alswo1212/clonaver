@@ -1,7 +1,7 @@
-﻿const Img = ({ bgx, bgy }) => {
+﻿const Img = ({ bgx, bgy, w = "w-10", h = "h-10", etc = "" }) => {
   return (
     <div
-      className={`img-set w-10 h-10`}
+      className={`img-set ${w} ${h} ${etc}`}
       style={{
         backgroundPosition: `${bgx}px ${bgy}px`,
       }}
