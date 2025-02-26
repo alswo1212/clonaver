@@ -6,9 +6,10 @@
 
 @layer components {
   .main-nav-box {
+    @apply pt-4 pb-3;
+
     @media (min-height: 720px) {
-      @apply pt-5;
-      @apply pb-9;
+      @apply pt-5 pb-9;
     }
   }
 }

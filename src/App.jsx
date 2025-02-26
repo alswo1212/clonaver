@@ -43,6 +43,18 @@ function App() {
     },
   ];
 
+  const leftTopIcons = [
+    { img: { bgx: -135, bgy: -145 }, ml: "" },
+    { img: { bgx: -45, bgy: -145 }, ml: "ml-0.5" },
+    { img: { bgx: -180, bgy: -145 }, ml: "ml-0.5" },
+  ];
+
+  const rightTopIcons = [
+    { img: { bgx: -225, bgy: -145 }, ml: "" },
+    { img: { bgx: -93, bgy: -59 }, ml: "ml-0.5" },
+    { img: { bgx: -90, bgy: -145 }, ml: "ml-0.5" },
+  ];
+
   return (
     <>
       <Header></Header>
@@ -88,8 +100,24 @@ function App() {
           </div>
           {/* 홍 상단 아이콘 */}
           <div className="absolute top-0 bottom-0 right-0 left-0 max-w-[1118px] m-[0_auto] box-border">
-            <div className="absolute top-0 left-0 z-20 pl-2.5"></div>
-            <div className="absolute top-0 right-0 z-20 pr-2.5"></div>
+            <div className="absolute top-0 left-0 z-20 pl-2.5">
+              {leftTopIcons.map((obj) => (
+                <div className={`relative float-left ${obj.ml}`}>
+                  <a className="block p-[8px_0px]">
+                    <Img etc={"block"} {...obj.img}></Img>
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="absolute top-0 right-0 z-20 pr-2.5">
+              {rightTopIcons.map((obj) => (
+                <div className={`relative float-left ${obj.ml}`}>
+                  <a className="block p-[8px_0px]">
+                    <Img etc={"block"} {...obj.img}></Img>
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         {/* AD 자리 */}
